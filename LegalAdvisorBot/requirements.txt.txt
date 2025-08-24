@@ -1,4 +1,5 @@
 streamlit
 gtts
 speechrecognition
-groq
+groq==0.11.0 
+
