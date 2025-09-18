@@ -34,6 +34,7 @@ def speak_into_text_box(key):
     try:
         with sr.Microphone() as source:
             st.info("🎤 Listening...")
+            recognizer.adjust_for_ambient_noise(source)
             audio = recognizer.listen(source)
             text = recognizer.recognize_google(audio)
             
